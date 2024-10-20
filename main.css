@@ -66,7 +66,7 @@ overflow: scroll;
 .tasks .task.done{
     opacity: 0.5;
 }
-.tasks .task span{
+.delall , .tasks .task span{
     font-weight: bold;
     font-size: 10px;
     background-color: red;
@@ -74,4 +74,9 @@ overflow: scroll;
     padding: 2px 6px;
     border-radius: 4px;
     cursor: pointer; 
+}
+ .delall{
+    padding: 1em 2em;
+    width: 100px;
+    margin: 2em;
 }

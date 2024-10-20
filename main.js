@@ -3,12 +3,20 @@ let input = document.querySelector("input")
 let tasks = document.querySelector(".tasks")
 let content=[]
 returnstored()
-btn.onclick=()=>{
-    if (input.value !=="") {
-        main(input.value)
-        input.value=""
+btn.addEventListener('click', () => {
+    if (input.value !== "") {
+        main(input.value);
+        input.value = "";
     }
-}
+});
+document.addEventListener('keydown', (event) => {
+    if (event.key === 'Enter') {
+        if (input.value !== "") {
+            main(input.value);
+            input.value = "";
+        }
+    }
+});
 
 function main(textcontent) {
     let field = {
@@ -78,3 +86,4 @@ function toggledone(fieldid) {
     }
     storefields(content)
 }
+document.querySelector(".delall").onclick = () =>{tasks.innerHTML="";localStorage.clear()}
